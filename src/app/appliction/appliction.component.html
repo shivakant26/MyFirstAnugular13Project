@@ -1,0 +1,54 @@
+<div class="appliction-page">
+<div [ngSwitch] = "color">
+    <h2>Switch Case Example</h2>
+    <h4 *ngSwitchCase = "'red'" style="color: red;">Red Color</h4>
+    <h4 *ngSwitchCase = "'blue'" style="color: blue;">blue Color</h4>
+    <h4 *ngSwitchCase = "'gray'" style="color: grey;">grey Color</h4>
+    <h4 *ngSwitchCase = "'voilet'" style="color: voilet;">voilet Color</h4>
+    <h4 *ngSwitchCase = "'yellow'" style="color: yellow;">yellow Color</h4>
+</div>
+
+<div class="condition-statement">
+<h2>ngIf Conditional Example</h2>
+<h4 *ngIf="age>=18 else show" style="color:green;">You are eligible for Vote</h4>
+<ng-template #show>
+    <h4 style="color: red;">Sorry You Are Not Eligible</h4>
+</ng-template>
+</div>
+
+<div class="condition-statement">
+    <h2>Multiple Conditional Example</h2>
+    <ng-template [ngIf]="color1 === 'red'">
+        <div  style="background-color: red;color:aliceblue;">Red color</div>
+    </ng-template>
+    <ng-template [ngIf]="color1 === 'blue'">
+        <div  style="background-color: blue;color:aliceblue;">blue color</div>
+    </ng-template>
+    <ng-template [ngIf]="color1 === 'green'">
+        <div style="background-color: green;color:aliceblue;">green color</div>
+    </ng-template>
+    <ng-template [ngIf]="color1 === 'yellow'">
+        <div style="background-color: yellow;color:aliceblue;">yellow color</div>
+    </ng-template>
+</div>
+
+<div class="for-loop">
+    <h2>Example of For Loop</h2>
+    <ul *ngFor="let x of userList">
+        <li>{{x.name}}</li>
+        <li>{{x.age}}</li>
+        <li>
+            <ul *ngFor="let y of x.socialAccount">
+                <li>{{y}}</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div class="color-property">
+    <h2>style binding via ts file</h2>
+    <h4 [style.color]="color" [style.fontSize] = "fontSize">color Effect</h4>
+    <button (click)="updateColor()">Update Color</button>
+</div>
+
+</div>

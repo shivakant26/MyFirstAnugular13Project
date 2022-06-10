@@ -1,0 +1,19 @@
+<div class="basic-form-page">
+    <button (click)="Toggle()">Form Toggle</button>
+    <h2>{{title}}</h2>
+    <div class="form-section" *ngIf="display">
+        <form #f="ngForm" (ngSubmit)="getData(f.value)">
+            <div class="form-field">
+                <input type="text" ngModel name="wish" placeholder="Enter_your_wish"/>
+            </div>
+            <div class="form-field">
+                <input type="text" ngModel name="time" placeholder="Enter_your_time"/>
+            </div>
+            <div class="form-field">
+                <input type="text" ngModel name="Quantity" placeholder="Enter_your_Quantity"/>
+            </div>
+            <button mat-raised-button style="background-color: rgb(112, 48, 6);color:#fff">Add Wish</button>
+        </form>
+    </div>
+</div>
+

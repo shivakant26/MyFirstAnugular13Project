@@ -1,0 +1,35 @@
+<h3>Example of Property binding</h3>
+<input type="text" [value]='title'>
+<button [disabled]="bool">Submit</button><br>
+<h3>Example of Event binding</h3>
+<button (click)="checkEvent()">Click me</button>
+<h3>Example of forloop to print data in angular</h3>
+<table border="1">
+    <tr>
+        <th>Emp_id</th>
+        <th>Emp_name</th>
+        <th>Emp_salary</th>
+    </tr>
+    <tr *ngFor="let x of data;index as i">
+        <td>{{x.Emp_id}}</td>
+        <td>{{x.Emp_name}}</td>
+        <td>{{x.Emp_salary}}</td>
+    </tr>
+</table>
+<h3>Example of if else</h3>
+<div *ngIf="age > 18; else low">
+    <p style="color:green">you are elegible for vote</p>
+</div>
+<ng-template #low>
+    <p style="color:red">you are not eligible !</p>
+</ng-template>
+
+<!-- <h3>Interface value show here</h3>
+<h2>{{hero.name | uppercase}} Details</h2>
+<div><span>id: </span>{{hero.id}}</div>
+<div><span>name: </span>{{hero.name}}</div>
+<h3>Example of Two way bindig</h3> -->
+<!-- <div>
+    <label for="name">Hero name: </label>
+    <input id="name" [(ngModel)]="hero.name" placeholder="name">
+</div> -->
